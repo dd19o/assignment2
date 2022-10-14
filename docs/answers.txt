@@ -1,0 +1,47 @@
+Date when I went through the Git Lab Tutorials: 10/11/2022
+Date when I setup my GitHub Account: beginning of the Fall 2022 semester.
+Link to the repository: https://github.com/dd19o/assignment2.git
+
+Repository Tasks:
+
+5.1
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+5.2 There has been 11 commits done to this repository so far. I used the "git rev-list --count master" command to get this number. 
+
+5.3 Command used "git log -1 --pretty="format:%ct       %cr     %h" README.md . Last modified date: 2 days ago
+
+5.4. 1. Branches are helpful if you make a mistake you are working a "backup" and you don't lose all your original work. You can push updates once they are complete and tested 100%.
+     2. Branches are also very helpful when working in a team setting becayse things would get messy fast if multiple people were editing the same files at the same time. Everyone working on their own branch solves this issue.
+
+5.5 The git log command shows a list of previous commits while the git status command shows changes made since the last commit.
+
+5.6 git log -- Vehicle.h
+
+5.7 git log -- grep="file"
+
+5.8. 1. Inheritance is when gets its properties from another class. (like parent/child classes)
+     2. Polymorphism is when a child class overloads one of its parents functions to work in a different manner for its specific needs.
+     3. Encapsulaton is when code is written in a way that the user is on a "need-to-know" basis and cannot access any more of the data than they need. This includes using Public, Private, and Protected access modifiers.
+
+5.9
+Integration Manager:
+- Each developer makes push to his/her own public repository, and pull from the blessed/central repository. 
+- Integration conflict resolution are done by the integration manager.(Centralized integration)
+- Each developer makes pull and push to his/her own public repository.
+
+Dictator and Lieutenants:
+- One central/blessed repository: Everyone makes pull from this repository. Only the dictator can push to it.
+- Dictator repository: Merges changes in the lieutenant repositories and solves any arising conflicts.
+- Lieutenant repositories: Merges changes for some (not all) developers and solves conflicts. A developer pushes changes to the assigned lieutenant repository.
+
+5.10 
+The benevolent dictator acts on the commits by pushing it from their repository to a reference repository from which all the 100 developers can pull. The whole process goes as follows:
+- Collaborators operate on their topic branch and move their work on top of the master. The master branch belongs to the reference directory to which the Dictator pushes.
+- The Lieutenants then go on to merge the topic branches to the master branch.
+- The Dictator merges the master branches from Lieutenants into the Dictator’s master branch.
+- Finally, the Dictator pushes that master branch to the reference repository where all the 100 developers/contributors can pull/rebase on it.
