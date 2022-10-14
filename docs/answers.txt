@@ -40,8 +40,8 @@ Dictator and Lieutenants:
 - Lieutenant repositories: Merges changes for some (not all) developers and solves conflicts. A developer pushes changes to the assigned lieutenant repository.
 
 5.10 
-The benevolent dictator acts on the commits by pushing it from their repository to a reference repository from which all the 100 developers can pull. The whole process goes as follows:
-- Collaborators operate on their topic branch and move their work on top of the master. The master branch belongs to the reference directory to which the Dictator pushes.
-- The Lieutenants then go on to merge the topic branches to the master branch.
-- The Dictator merges the master branches from Lieutenants into the Dictator’s master branch.
-- Finally, the Dictator pushes that master branch to the reference repository where all the 100 developers/contributors can pull/rebase on it.
+For a team of 100 developers it would be more benefitial to choose Dictator and Lieutenants workflow because Dictator is the only guy who has the permission
+to push to the central/blessed repository. He also merges changes in the Lieutenants repositories and solves any arising conflicts so that the central/blessed
+repository doesn't get the changes that could not "work" with the updated code. On the other hand, there are Lieutenants who merge changes from developers and
+solve conflicts before the Dictator gets to see the changes. That way, the developers can push the changes to the Lieutenants but are not guaranteed for their
+push to be succesfull (the git push can be rejected by Lieutenant if they think that the code is no good).
